@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_19767ade2b7c7258059655f2ef7c4f6c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            top: 10px; 
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            background-color: white;
+            padding: 10px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;">
+    Oakville Flu Shot Distribution (Lakeshore to Dundas, Bronte to Winston Churchill)
+</div>
+    
+            <div class="folium-map" id="map_19767ade2b7c7258059655f2ef7c4f6c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_19767ade2b7c7258059655f2ef7c4f6c = L.map(
+                "map_19767ade2b7c7258059655f2ef7c4f6c",
+                {
+                    center: [43.4295, -79.7531],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+
+            
+
+        
+    
+            var tile_layer_7bc64741dee6137d8bf23f59144f8572 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7bc64741dee6137d8bf23f59144f8572.addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+            var marker_cluster_aee82151d53f8f337d5ac9830606befa = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            marker_cluster_aee82151d53f8f337d5ac9830606befa.addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+            var circle_marker_c0445906e1ba9772b6165ab4fcdf3b60 = L.circleMarker(
+                [43.4474, -79.6665],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.31147540983606, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+        var popup_1fcd9afd4e8e88dd5915057668fb5fd1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8ec96c9775743911d2ac047ef831f7a = $(`<div id="html_c8ec96c9775743911d2ac047ef831f7a" style="width: 100.0%; height: 100.0%;">Shoppers Drug Mart, 123 Lakeshore Rd W, Oakville<br>Flu Shots: 104</div>`)[0];
+                popup_1fcd9afd4e8e88dd5915057668fb5fd1.setContent(html_c8ec96c9775743911d2ac047ef831f7a);
+            
+        
+
+        circle_marker_c0445906e1ba9772b6165ab4fcdf3b60.bindPopup(popup_1fcd9afd4e8e88dd5915057668fb5fd1)
+        ;
+
+        
+    
+    
+            var circle_marker_523e358eabd3c88be2b336c91873c73a = L.circleMarker(
+                [43.45, -79.7],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.721311475409834, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+        var popup_f975341d06eb48fd62e4d4b562574670 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ebec198f654b2ba9591c3e2ad0e733f1 = $(`<div id="html_ebec198f654b2ba9591c3e2ad0e733f1" style="width: 100.0%; height: 100.0%;">Rexall, 245 Trafalgar Rd, Oakville<br>Flu Shots: 106</div>`)[0];
+                popup_f975341d06eb48fd62e4d4b562574670.setContent(html_ebec198f654b2ba9591c3e2ad0e733f1);
+            
+        
+
+        circle_marker_523e358eabd3c88be2b336c91873c73a.bindPopup(popup_f975341d06eb48fd62e4d4b562574670)
+        ;
+
+        
+    
+    
+            var circle_marker_c90da6a016d023bc6c70b645cc0f757e = L.circleMarker(
+                [43.448, -79.68],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40.0, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+        var popup_bd377269d7a1a7e3958041e32909f058 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ada7e1b7cb27607ff0c921539a6e242 = $(`<div id="html_7ada7e1b7cb27607ff0c921539a6e242" style="width: 100.0%; height: 100.0%;">Pharmasave, 156 Kerr St, Oakville<br>Flu Shots: 122</div>`)[0];
+                popup_bd377269d7a1a7e3958041e32909f058.setContent(html_7ada7e1b7cb27607ff0c921539a6e242);
+            
+        
+
+        circle_marker_c90da6a016d023bc6c70b645cc0f757e.bindPopup(popup_bd377269d7a1a7e3958041e32909f058)
+        ;
+
+        
+    
+    
+            var circle_marker_439fb87363cc1f0afb3ff54150c30370 = L.circleMarker(
+                [43.449, -79.69],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.23770491803279, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+        var popup_ef754eaad5533f93eec1b1016859d597 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc4249ba25d32cd4d0dabb04573c3575 = $(`<div id="html_cc4249ba25d32cd4d0dabb04573c3575" style="width: 100.0%; height: 100.0%;">Guardian Pharmacy, 89 Cornwall Rd, Oakville<br>Flu Shots: 89</div>`)[0];
+                popup_ef754eaad5533f93eec1b1016859d597.setContent(html_cc4249ba25d32cd4d0dabb04573c3575);
+            
+        
+
+        circle_marker_439fb87363cc1f0afb3ff54150c30370.bindPopup(popup_ef754eaad5533f93eec1b1016859d597)
+        ;
+
+        
+    
+    
+            var circle_marker_717c3657858b4ceb28ffb49df13bd6d9 = L.circleMarker(
+                [43.451, -79.71],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 38.36065573770492, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+        var popup_db93178eb6d0a39aa1df056ac71fbd6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32817af7a2652782fa03b884e453fe3d = $(`<div id="html_32817af7a2652782fa03b884e453fe3d" style="width: 100.0%; height: 100.0%;">Walmart Pharmacy, 240 Leighland Ave, Oakville<br>Flu Shots: 114</div>`)[0];
+                popup_db93178eb6d0a39aa1df056ac71fbd6d.setContent(html_32817af7a2652782fa03b884e453fe3d);
+            
+        
+
+        circle_marker_717c3657858b4ceb28ffb49df13bd6d9.bindPopup(popup_db93178eb6d0a39aa1df056ac71fbd6d)
+        ;
+
+        
+    
+    
+            var circle_marker_32ec28f634a3ddf5ca523c91ad9dee54 = L.circleMarker(
+                [43.452, -79.72],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 35.90163934426229, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+        var popup_d834bdb56e13f44307fb8b7201bc8493 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5ebd75dca07e5f615ed19535a3df84c = $(`<div id="html_d5ebd75dca07e5f615ed19535a3df84c" style="width: 100.0%; height: 100.0%;">Costco Pharmacy, 1200 South Service Rd, Oakville<br>Flu Shots: 102</div>`)[0];
+                popup_d834bdb56e13f44307fb8b7201bc8493.setContent(html_d5ebd75dca07e5f615ed19535a3df84c);
+            
+        
+
+        circle_marker_32ec28f634a3ddf5ca523c91ad9dee54.bindPopup(popup_d834bdb56e13f44307fb8b7201bc8493)
+        ;
+
+        
+    
+    
+            var circle_marker_d96f0b21e3382c44390b9f6daccf279e = L.circleMarker(
+                [43.4485, -79.685],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.39344262295082, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+        var popup_4c3252631d50b329003990e400376871 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53a778b1ec5f328f22b48d69e8ebadd9 = $(`<div id="html_53a778b1ec5f328f22b48d69e8ebadd9" style="width: 100.0%; height: 100.0%;">Loblaw Pharmacy, 301 Cornwall Rd, Oakville<br>Flu Shots: 80</div>`)[0];
+                popup_4c3252631d50b329003990e400376871.setContent(html_53a778b1ec5f328f22b48d69e8ebadd9);
+            
+        
+
+        circle_marker_d96f0b21e3382c44390b9f6daccf279e.bindPopup(popup_4c3252631d50b329003990e400376871)
+        ;
+
+        
+    
+    
+            var circle_marker_09ad4593e1aaba28213d48f1d55884dd = L.circleMarker(
+                [43.451, -79.71],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.598360655737704, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+        var popup_387a71c9e84a9b54ff8e9acd0aeec7f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c6fb1021f0e91433dbcbb51997e9916 = $(`<div id="html_5c6fb1021f0e91433dbcbb51997e9916" style="width: 100.0%; height: 100.0%;">Sobeys Pharmacy, 240 Leighland Ave, Oakville<br>Flu Shots: 81</div>`)[0];
+                popup_387a71c9e84a9b54ff8e9acd0aeec7f2.setContent(html_5c6fb1021f0e91433dbcbb51997e9916);
+            
+        
+
+        circle_marker_09ad4593e1aaba28213d48f1d55884dd.bindPopup(popup_387a71c9e84a9b54ff8e9acd0aeec7f2)
+        ;
+
+        
+    
+    
+            var circle_marker_0555c7a6557f39b6786bfd80eac88889 = L.circleMarker(
+                [43.4482, -79.682],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 34.4672131147541, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+        var popup_0c36a3668d54f6a3a0925b7ec10d8b21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b9e845bd32a841fc45139bca4de3dbc = $(`<div id="html_6b9e845bd32a841fc45139bca4de3dbc" style="width: 100.0%; height: 100.0%;">Medicine Shoppe, 345 Kerr St, Oakville<br>Flu Shots: 95</div>`)[0];
+                popup_0c36a3668d54f6a3a0925b7ec10d8b21.setContent(html_6b9e845bd32a841fc45139bca4de3dbc);
+            
+        
+
+        circle_marker_0555c7a6557f39b6786bfd80eac88889.bindPopup(popup_0c36a3668d54f6a3a0925b7ec10d8b21)
+        ;
+
+        
+    
+    
+            var circle_marker_31db770425825a82ac5a44118990a393 = L.circleMarker(
+                [43.4476, -79.668],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.92622950819672, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+        var popup_6dddf6c33f9276c15d2cc48a1e40c60b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d9cf09ba70178d5d98e2201747889ed = $(`<div id="html_1d9cf09ba70178d5d98e2201747889ed" style="width: 100.0%; height: 100.0%;">IDA Pharmacy, 178 Lakeshore Rd E, Oakville<br>Flu Shots: 107</div>`)[0];
+                popup_6dddf6c33f9276c15d2cc48a1e40c60b.setContent(html_1d9cf09ba70178d5d98e2201747889ed);
+            
+        
+
+        circle_marker_31db770425825a82ac5a44118990a393.bindPopup(popup_6dddf6c33f9276c15d2cc48a1e40c60b)
+        ;
+
+        
+    
+    
+            var polygon_f4a547aaf207994f671126f81d4d7353 = L.polygon(
+                [[43.3863, -79.7935], [43.4727, -79.7935], [43.4727, -79.7127], [43.3927, -79.7127], [43.3863, -79.7935]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+        
+    
+            var layer_control_d75bf3285c46853e83d93a05272ff55f_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_7bc64741dee6137d8bf23f59144f8572,
+                },
+                overlays :  {
+                    "Pharmacies" : marker_cluster_aee82151d53f8f337d5ac9830606befa,
+                },
+            };
+            let layer_control_d75bf3285c46853e83d93a05272ff55f = L.control.layers(
+                layer_control_d75bf3285c46853e83d93a05272ff55f_layers.base_layers,
+                layer_control_d75bf3285c46853e83d93a05272ff55f_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_19767ade2b7c7258059655f2ef7c4f6c);
+
+        
+</script>
+</html>
